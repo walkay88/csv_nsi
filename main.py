@@ -1,21 +1,14 @@
-import csv
-from dis import show_code
-from errno import ENETRESET
-from msilib.schema import SelfReg
 from tkinter import *
-from tkinter.messagebox import showinfo
-from turtle import showturtle
-
-
-class App(Tk):
+import csv
+class FSA():
     def __init__(self):
-        Tk.__init__(self)
-
-        self.title("CSV-NSI")
-        self.geometry("1280x720")
-        
-        self.cadre = Frame(self.fname, bg='white', borderwidth=2, relief=GROOVE)
-        SelfReg.cadre.pack(side=TOP, padx=10, pady=10)
+     
+        self.fen=Tk()
+        self.fen.title('nsi_csv')
+        self.fen.pack_propagate(0)
+ 
+        self.cadre = Frame(self.fen, bg='white', borderwidth=2, relief=GROOVE)
+        self.cadre.pack(side=TOP, padx=10, pady=10)
  
         self.cadre2 = Frame(self.fen, bg='white', borderwidth=2, relief=GROOVE)
         self.cadre2.pack(side=LEFT,padx=10, pady=10)
@@ -42,12 +35,12 @@ class App(Tk):
     def action(self):
  
         self.lab = Label(self.cadre)
-        self.lab.config(text='bravo')
+        self.lab.config(text='bonjour')
         self.lab.pack()
  
     def action2(self):
          
-        self.fname="ficher_personnel.csv"
+        self.fname="large.csv"
         self.file=open(self.fname, "rb")
         try:
             self.reader=csv.reader(self.file)
@@ -57,5 +50,5 @@ class App(Tk):
             self.file.close()
  
 if __name__ == '__main__' :
-    app= App(Tk)
+    app= FSA()
     app.run()

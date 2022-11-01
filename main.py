@@ -1,9 +1,12 @@
-from tkinter import *
+from tkinter import Tk
 
-fenetre = Tk()
 
-label = Label(fenetre, text="Hello World")
-label.pack()
+class App(Tk):
+    def __init__(self):
+        Tk.__init__(self)
 
-fenetre.mainloop()
-    
+        self.title("CSV-NSI")
+        self.geometry("1280x720")
+
+
+App().mainloop()

@@ -10,9 +10,9 @@ def creation_liste(nom_fichier):
     liste=[]                #on appelle une liste vide
     liste_charlie=[]
     for enregistrement in fichier:  #on instaure une boucle pour tt les enregistrements du fichier
-        liste.append(enregistrement)  #on apprend a la liste les enregistrements du fichier
+        liste.append(enregistrement.split(';'))  #on apprend a la liste les enregistrements du fichier
     fichier.close()                 #on ferme le fichier
     return liste                      #et on retourne la liste
  
-f="ou_est_charlieV2_ANSI.txt"       #on defini f par le nom du fichier
+f='ou_est_charlieV2_ANSI.csv'       #on defini f par le nom du fichier
 liste_charlie=creation_liste(f)           #et on dit que la liste charlies est egale a la liste quon crée par rapport a f

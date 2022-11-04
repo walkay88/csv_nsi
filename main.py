@@ -15,8 +15,6 @@ class App(Tk):
         self.menubar()
         self.maketable()
 
-        # Propriétés de la fenêtre
-
         self.title("CSV-NSI")
         self.geometry("1280x720")
         self["bg"] = "#121212"

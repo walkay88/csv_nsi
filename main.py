@@ -1,8 +1,8 @@
 from csv import reader
 from tkinter import BOTH, BOTTOM, CENTER, NO, RIGHT, X, Y, Frame, Menu, Scrollbar, Tk
 from tkinter.filedialog import askopenfilename
+from tkinter.simpledialog import askstring
 from tkinter.ttk import Treeview
-
 
 class App(Tk):
     def __init__(self):

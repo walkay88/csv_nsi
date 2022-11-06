@@ -13,7 +13,7 @@ def tableau(nom_fichier):   #on crée la fonction tableau qui prend en parametre
     n=n-1   #comme precedemment
     for element in liste:     #on recréé une boucle mais pour parcourir cet fois les elements de la liste
         element[9]=int(element[9])   #et on change le type du 10e element pour passer de str a int
-        sup(liste,1)   #on supprime tt la premier colonne de la liste (sexe)
+        supp(liste,1)   #on supprime tt la premier colonne de la liste (sexe)
    
     fichier.close()    #on fermme le fichier          
     tab=[liste,n]    #on dit que tab comprend la liste et la variable n
@@ -42,17 +42,17 @@ def ncarac(liste,n,po):    #on créé la fontion ncarac qui prend en parametre l
     return ls    #on renvoie ls
  
 def comp(liste,carac,po):   #on créé la fontion comp qui prend en parametre liste , carac et po 
-    nb=0   #on definit la variable nb (=0)
+    r=0   #on definit la variable r (=0)
     if type(carac)== int:    #si le type de carac est int
         for element in liste:       #on créé une boucle pour parcourir les elements de la liste
 
             if element[8]>carac:  #si l'element[8] (donc le neuvieme) est supperieur a carac 
-                nb=nb+1  #on ajoute 1 a la variable nb
+                r=r+1  #on ajoute 1 a la variable r
     else:  # sinon (si le type de carac est autre que int)
         for element in liste:  ##on recréé une boucle pour parcourir les elements de la liste
             if element[po]==carac:    #si les elements du parametre po est egale a carac
-                nb=nb+1    #alors on ejoute  a la variable nb 
-    return nb   #on renvoi nb
+                r=r+1    #alors on 1 ajoute  a la variabler 
+    return r   #on renvoi nb
  
 def compte_carac(liste,colcar1,colcar2,colcar3,caracA,caracB,caracC,s):  #on créé une fonction prenant en parametre liste, colcar1, colcar2, colcar3, caracA, caracB, caracC, s
     

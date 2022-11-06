@@ -3,6 +3,9 @@ from tkinter import BOTH, BOTTOM, CENTER, NO, RIGHT, X, Y, Frame, Menu, Scrollba
 from tkinter.filedialog import askopenfilename
 from tkinter.simpledialog import askstring
 from tkinter.ttk import Treeview
+from tkinter import *
+from tkinter.font import *
+import random
 
 class App(Tk):
     def __init__(self):
@@ -68,7 +71,7 @@ class App(Tk):
             self.tree.heading(key, text=key, anchor=CENTER)
 
         for row in rows:
-            self.tree.insert("", "end", values=row)
+            self.tree.insert("", "end", values=row)       
 
     def quit(self):
         print("Quitting...")
